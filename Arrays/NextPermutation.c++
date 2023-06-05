@@ -26,6 +26,7 @@ void nextPermutation(vector<int> &nums)
   int p = -1;
   int n = nums.size();
   // now we find the first minimal point from back to swap it
+  // n-2 until 0, because we can't compare last element with any
   for (int i = n - 2; i >= 0; i--)
   {
     if (nums[i] < nums[i + 1])
@@ -57,6 +58,9 @@ void nextPermutation(vector<int> &nums)
 
   reverse(nums.begin() + p + 1, nums.end());
 }
+
+// Time Complexity : O(3*n)
+// Space Complexity :O(1)
 
 /*
 

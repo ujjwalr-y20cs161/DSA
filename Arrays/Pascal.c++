@@ -29,7 +29,7 @@ public:
     Triangle.push_back({1});
 
     // Traverse numRows-1 times, as already first row is generated.
-    for (int i = 1; i < numRows; i++)
+    for (int i = 1; i < numRows; i++) // n*n
     {
       vector<int> tri;
       // Generate the values by iterating, ith row contains i+1 elements,
@@ -52,6 +52,8 @@ public:
     return Triangle;
   }
 };
+// Time Complexity : O(n^2)
+// Space Complexity :O(1)
 
 //  ### Method 2: By using Formula
 //  [This method is inefficent to caluculate and print whole Triangle]
@@ -97,3 +99,6 @@ vector<vector<int>> generate(int numRows)
   }
   return Triangle;
 }
+
+// Time Complexity : O(n^2)
+// Space Complexity :O(1)
