@@ -30,7 +30,7 @@ Byju's
 */
 
 #include <bits/stdc++.h>
-#define endd
+#define endd "\n"
 using namespace std;
 
 int findDuplicate(vector<int> &nums)
@@ -52,7 +52,7 @@ int findDuplicate(vector<int> &nums)
 
   // naive approach using integer array:
 
-  vector<int> freq(nums.size() + 1, 0);
+  int freq[nums.size() + 1] = {0};
 
   for (auto i : nums)
   {
@@ -73,3 +73,10 @@ int findDuplicate(vector<int> &nums)
 
 // :: Optimized Approach Using Fast Pointer and Slow pointer.
 // Learn Floyd's Cycle Detection
+
+int main()
+{
+  vector<int> nums = {3, 1, 2, 5, 3};
+
+  cout << findDuplicate(nums) << endl;
+}
